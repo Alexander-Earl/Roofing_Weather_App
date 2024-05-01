@@ -1,0 +1,75 @@
+/* The container holding the buttons, textboxes and text are aligned
+to the center and are also responsive. We also padding so there will be
+spacing on the outside*/
+div.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5em;
+}
+
+/* We add this media query so it can resize the page to a mobile
+phone size */
+@media screen and (min-height: 736px) and (min-width: 414px){
+	/* Sets the background of this component to a roof */
+	#homeBody {
+		background-image: url('./assets/homebackground.jpg');
+		background-size: cover;
+		width: 414px;
+		height: 736px;
+	}
+}
+
+/* The 'WEATHER' text is made thin and black
+There is also spacing at the bottom of the word and
+spacing in between letters */
+.weatherText {
+	color: black;
+	font-weight: lighter;
+	letter-spacing: 5px;
+	margin-bottom: 0.5em;
+}
+
+/* The postcode textbox is cannot be smaller than 200px
+if the window size shrinks */
+.postcodeInput {
+	min-width: 200px;
+}
+
+/* This ensures that the form elements are display on top of each other
+instead of inline */ 
+.formGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+/* "OR" text is made white and adds spacing on top or the bottom of the text */
+#OrText {
+	color: white;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+/* CSS to add responsiveness to the home page */
+
+/* We add this media query so when the phone is flipped it will 
+change the dimensions and alter the padding of the container so it
+doesn't overflow */
+@media screen and (max-height: 414px) and (max-width: 736px){
+	#homeBody {
+		background-image: url('./assets/homebackground.jpg');
+		width: 736px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		background-size: cover;
+	}
+	
+	div.container {
+		padding: 40px;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+} 
